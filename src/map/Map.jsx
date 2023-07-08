@@ -1,5 +1,5 @@
 import React from 'react'
-import { MapContainer, TileLayer } from 'react-leaflet'
+import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet'
 
 
 const Map = () => {
@@ -16,6 +16,7 @@ const Map = () => {
           attribution='&amp;copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <ZoomControl position='topright'/>
       </MapContainer>
     </>
   )
