@@ -1,22 +1,18 @@
 import React from 'react'
-import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet'
-
+import { MapContainer, ZoomControl } from 'react-leaflet'
+import Layers from './Layers'
 
 const Map = () => {
-
   return (
     <>
-      <MapContainer 
-        center={[37.0902, -95.7129]} 
-        zoom={3} 
-        zoomControl={false} 
+      <MapContainer
+        center={[37.0902, -95.7129]}
+        zoom={3}
+        zoomControl={false}
         style={{ height: '100vh', width: '100%' }}
       >
-        <TileLayer
-          attribution='&amp;copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <ZoomControl position='topright'/>
+        <Layers />
+        <ZoomControl position='topright' />
       </MapContainer>
     </>
   )
